@@ -1,0 +1,38 @@
+language: php
+dist: trusty
+
+branches:
+  only:
+    - 4.0
+    - master
+
+services:
+  - mysql
+
+cache:
+  directories:
+    - $HOME/.composer/cache
+
+php:
+  - 7.0
+
+env:
+  - DB_USER=travis
+
+before_script:
+  - mysql -u root -e 'CREATE DATABASE IF NOT EXISTS test;'
+
+install:
+  - composer install --prefer-dist
+  - composer require twig/twig
+  - php -r 'file_exists(".env.json") || copy(".env.example.json", ".env.json");'
+  - php bow run:server --port=5000 &
+  - sleep 5
+
+matrix:
+  allow_failures:
+    - php: nightly
+  fast_finish: true
+
+script:
+  - ./vendor/bin/phpunit
