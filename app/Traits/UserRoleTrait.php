@@ -2,6 +2,8 @@
 
 namespace App\Traits;
 
+use App\Exception\UserRoleAlreadyAttach;
+
 trait UserRoleTrait
 {
     /**
@@ -21,9 +23,16 @@ trait UserRoleTrait
      * 
      * @param Role $role
      * @return boolean
+     * @throws UserRoleAlreadyAttach
      */
     public function attach(Role $role)
     {
+        if ($this->hasRule(Role)) {
+            throw (new UserRoleAlreadyAttach)
+                ->setRole($role)
+                ->setUser($this);
+        }
+
         return UserRole::create([
             'user_id' => $this->id,
             'role_id' => $role->id

@@ -11,12 +11,9 @@ class Version20190807211040CreateUserRoleTable extends Migration
     public function up()
     {
         $this->create("user_roles", function (SQLGenerator $table) {
-            $table->addInteger('user_id', [
-                'primary' => true
-            ]);
-            $table->addInteger('role_id', [
-                'primary' => true
-            ]);
+            $table->addIncrement('id');
+            $table->addInteger('user_id');
+            $table->addInteger('role_id');
             
             $table->addTimestamps();
             $table->withEngine('InnoDB');

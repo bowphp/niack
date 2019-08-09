@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Exception\UserRoleAlreadyAttach;
 use Bow\Database\Exception\NotFoundException;
 use Exception;
 
@@ -17,6 +18,10 @@ class ErrorHandle
     {
         if ($exception instanceof NotFoundException) {
             return $this->render('errors.404', ['code' => 404]);
+        }
+
+        if ($exception instanceof UserRoleAlreadyAttach) {
+            // Do Somethink
         }
     }
 

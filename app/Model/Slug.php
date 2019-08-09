@@ -4,7 +4,7 @@ namespace App\Model;
 
 use Bow\Database\Barry\Model;
 
-class Slugable extends Model
+class Slug extends Model
 {
     /**
      * Get the slugable information
