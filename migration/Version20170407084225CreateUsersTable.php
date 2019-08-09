@@ -18,6 +18,7 @@ class Version20170407084225CreateUsersTable extends Migration
             $table->addColumn('description', 'string');
             $table->addColumn('email', 'string');
             $table->addColumn('password', 'string');
+            
             $table->addTimestamps();
             $table->withEngine('InnoDB');
         });

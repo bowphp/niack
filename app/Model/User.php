@@ -15,5 +15,13 @@ class User extends Model
         'password'
     ];
     
-    // Do something
+    /**
+     * Get the post created by the user
+     * 
+     * @return mixed
+     */
+    public function posts()
+    {
+        return $this->hasMany(Post::class, $this->id);
+    }
 }
