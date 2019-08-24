@@ -11,7 +11,7 @@ class Post extends Model
 
     /**
      * Get the user who have create the post
-     * 
+     *
      * @return User
      */
     public function author()

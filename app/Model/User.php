@@ -17,7 +17,7 @@ class User extends Model
     
     /**
      * Get the post created by the user
-     * 
+     *
      * @return mixed
      */
     public function posts()

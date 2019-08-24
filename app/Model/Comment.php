@@ -8,7 +8,7 @@ class Comment extends Model
 {
     /**
      * Check if comment have parent
-     * 
+     *
      * @return boolean
      */
     public function hasParent()
@@ -18,7 +18,7 @@ class Comment extends Model
 
     /**
      * Get the parent comment
-     * 
+     *
      * @return Comment|null
      */
     public function parent()
@@ -28,7 +28,7 @@ class Comment extends Model
 
     /**
      * Get all comments
-     * 
+     *
      * @return array
      */
     public function comments()

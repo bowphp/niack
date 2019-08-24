@@ -8,7 +8,7 @@ trait UserRoleTrait
 {
     /**
      * Check if user have role
-     * 
+     *
      * @param Role $role
      * @return boolean
      */
@@ -20,7 +20,7 @@ trait UserRoleTrait
 
     /**
      * Add the new role
-     * 
+     *
      * @param Role $role
      * @return boolean
      * @throws UserRoleAlreadyAttach
@@ -41,7 +41,7 @@ trait UserRoleTrait
 
     /**
      * Remote the new role
-     * 
+     *
      * @param Role $role
      * @return boolean
      */

@@ -8,7 +8,7 @@ class Slug extends Model
 {
     /**
      * Get the slugable information
-     * 
+     *
      * @return Post|Page
      */
     public function slugable()
@@ -19,7 +19,7 @@ class Slug extends Model
 
     /**
      * Check if slugable is post
-     * 
+     *
      * @return boolean
      */
     public function isPost()
@@ -29,7 +29,7 @@ class Slug extends Model
 
     /**
      * Check if slugable is page
-     * 
+     *
      * @return boolean
      */
     public function isPage()

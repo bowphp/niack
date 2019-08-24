@@ -8,7 +8,7 @@ class Category extends Model
 {
     /**
      * Get the post associate to the category
-     * 
+     *
      * @return mixed
      */
     public function posts()

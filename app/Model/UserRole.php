@@ -8,7 +8,7 @@ class UserRole extends Model
 {
     /**
      * Get the user
-     * 
+     *
      * @return User
      */
     public function user()
@@ -18,7 +18,7 @@ class UserRole extends Model
 
     /**
      * Get the role information
-     * 
+     *
      * @return User
      */
     public function user()

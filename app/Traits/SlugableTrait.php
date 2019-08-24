@@ -6,7 +6,7 @@ trait SlugableTrait
 {
     /**
      * Get the page slug
-     * 
+     *
      * @return Slug
      */
     public function slug()
