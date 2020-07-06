@@ -2,7 +2,9 @@
 
 namespace App\Traits;
 
-use App\Exception\UserRoleAlreadyAttach;
+use App\Exceptions\UserRoleAlreadyAttach;
+use App\Models\Role;
+use App\Models\UserRole;
 
 trait UserRoleTrait
 {
@@ -27,7 +29,7 @@ trait UserRoleTrait
      */
     public function attach(Role $role)
     {
-        if ($this->hasRule(Role)) {
+        if ($this->hasRule($role)) {
             throw (new UserRoleAlreadyAttach)
                 ->setRole($role)
                 ->setUser($this);

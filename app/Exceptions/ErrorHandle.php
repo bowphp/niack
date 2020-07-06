@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Exceptions;
 
 use App\Exception\UserRoleAlreadyAttach;
 use Bow\Database\Exception\NotFoundException;

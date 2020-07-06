@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Model;
+namespace App\Models;
 
 use Bow\Database\Barry\Model;
 
@@ -21,7 +21,7 @@ class UserRole extends Model
      *
      * @return User
      */
-    public function user()
+    public function role()
     {
         return $this->belongsTo(Role::class, 'role_id');
     }

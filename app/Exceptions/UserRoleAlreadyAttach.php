@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Exception;
+namespace App\Exceptions;
 
-use App\Model\Role;
+use App\Models\Role;
+use App\Models\User;
 
 class UserRoleAlreadyAttach extends \Exception
 {
